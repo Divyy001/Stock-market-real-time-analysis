@@ -47,9 +47,9 @@ The Spark Streaming application reads data from the Kafka topic, processes it, a
 
 Key Script: spark_streaming.py
 
-    Reads from Kafka using Spark's structured streaming API.
-    Parses and processes the data, extracting fields such as timestamp, bank name, open price, high price, low price, close price, and volume.
-    Formats the data and writes it to a MySQL table.
+- Reads from Kafka using Spark's structured streaming API.
+- Parses and processes the data, extracting fields such as timestamp, bank name, open price, high price, low price, close price, and volume.
+- Formats the data and writes it to a MySQL table.
 
 MySQL Database
 
@@ -59,17 +59,17 @@ Setup SQL:
 
 sql
 
-CREATE DATABASE stock_market;
-USE stock_market;
-CREATE TABLE stock_data (
-    Timestamp DATETIME,
-    Bank_Name VARCHAR(255),
-    Open DECIMAL(10,2),
-    High DECIMAL(10,2),
-    Low DECIMAL(10,2),
-    Close DECIMAL(10,2),
-    Volume DECIMAL(10,2)
-);
+    CREATE DATABASE stock_market;
+    USE stock_market;
+    CREATE TABLE stock_data (
+        Timestamp DATETIME,
+        Bank_Name VARCHAR(255),
+        Open DECIMAL(10,2),
+        High DECIMAL(10,2),
+        Low DECIMAL(10,2),
+        Close DECIMAL(10,2),
+        Volume DECIMAL(10,2)
+    );
 
 Power BI Dashboard
 
@@ -77,29 +77,29 @@ Power BI connects to the MySQL database to create a real-time dashboard. It visu
 
 Key Steps:
 
-    Connect to MySQL database from Power BI.
-    Design interactive dashboards to display real-time stock market trends.
-    Update dashboards dynamically as new data arrives.
+Connect to MySQL database from Power BI.
+Design interactive dashboards to display real-time stock market trends.
+Update dashboards dynamically as new data arrives.
 
 Setup and Execution
 
-    Start Kafka and Zookeeper:
-        Initialize and start Kafka and Zookeeper services.
+Start Kafka and Zookeeper:
+    Initialize and start Kafka and Zookeeper services.
 
-    Create Kafka Topics:
-        Set up the necessary Kafka topics to handle the stock market data.
+Create Kafka Topics:
+    Set up the necessary Kafka topics to handle the stock market data.
 
-    Run the Kafka Producer:
-        Execute the Kafka producer script to start streaming data.
+Run the Kafka Producer:
+    Execute the Kafka producer script to start streaming data.
 
-    Run the Spark Streaming Application:
-        Submit the Spark job to process the streaming data and store it in MySQL.
+Run the Spark Streaming Application:
+    Submit the Spark job to process the streaming data and store it in MySQL.
 
-    Configure MySQL Database:
-        Create the database and tables needed for storing the data.
+Configure MySQL Database:
+    Create the database and tables needed for storing the data.
 
-    Set Up Power BI:
-        Connect Power BI to the MySQL database and create real-time dashboards.
+Set Up Power BI:
+    Connect Power BI to the MySQL database and create real-time dashboards.
 
 Conclusion
 
